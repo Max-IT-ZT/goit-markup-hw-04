@@ -146,6 +146,13 @@ ol {
 /*=========== HERO ==========*/
 .hero {
   background-color: var(--background-color);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url('/images/hero/people-office.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
   padding: 188px 0px;
 }
 .hero-title {
@@ -182,10 +189,19 @@ ol {
 }
 /*=========== ADVANTAGES ==========*/
 .advantages {
+  padding-top: 120px;
   padding-bottom: 0px;
-  padding: 120px 0px;
 }
-
+.advantages-svg-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4fd;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  width: 264px;
+  height: 112px;
+}
 .advantages-list {
   display: flex;
   gap: 24px;
@@ -197,6 +213,18 @@ ol {
   flex-basis: calc((100% - 24px * 3) / 4);
   padding: 0px;
   gap: 8px;
+}
+/*=========== TITLE ==========*/
+.work-title,
+.team-title,
+.customers-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  color: var(--text-color);
+  text-transform: capitalize;
+  margin-bottom: 72px;
 }
 /*=========== SUBTITLE ==========*/
 .advantages-subtitle,
@@ -216,17 +244,7 @@ ol {
 .work-item {
   flex-basis: calc((100% - 24px * 2)) / 3;
 }
-/*=========== TITLE ==========*/
-.work-title,
-.team-title {
-  text-align: center;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  color: var(--text-color);
-  text-transform: capitalize;
-  margin-bottom: 72px;
-}
+
 /*=========== TEAM ==========*/
 .team-list {
   display: flex;
@@ -248,12 +266,52 @@ ol {
 }
 .team-tex {
   text-align: center;
+  margin-bottom: 8px;
+}
+.social-list {
+  display: flex;
+  gap: 24px;
+}
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--logo-color-web);
+  fill: #ffffff;
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--a-active-color);
 }
 .team-card {
   padding: 32px 16px;
 }
 .container-team-text {
   justify-content: center;
+}
+
+/* ==========Customers============ */
+.customers-list {
+  display: flex;
+  gap: 24px;
+}
+.customers-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  width: 168px;
+  height: 88px;
+  fill: #8e8f99;
+}
+.customers-link:hover,
+.customers-link:focus {
+  border-color: var(--a-active-color);
+  fill: var(--a-active-color);
 }
 /*=========== FOOTER ==========*/
 .footer {
@@ -277,6 +335,22 @@ ol {
 .footer-text {
   color: var(--footer-text-color);
   width: 264px;
+}
+
+.footer-list {
+  display: flex;
+  gap: 120px;
+}
+.footer-sub-text {
+  color: var(--footer-text-color);
+  margin-bottom: 16px;
+}
+.footer-item {
+  max-width: 208px;
+}
+.social-list-footer {
+  display: flex;
+  gap: 16px;
 }
 /*=========== PORTFOLIO MENU ==========*/
 .menu-list {
