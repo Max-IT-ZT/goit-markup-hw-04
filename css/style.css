@@ -14,6 +14,8 @@
   --portfolio-btn-color: #f4f4fd;
   --portfolio-btn-text: #4d5ae5;
   --border-btn: #e7e9fc;
+  --webkit-text-fill-color: #f4f4fd;
+  --customers-link-color: #8e8f99;
 }
 /*Загальний стиль*/
 body {
@@ -88,6 +90,8 @@ ol {
 /*=========== HEADER ==========*/
 .header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-container {
   display: flex;
@@ -153,7 +157,11 @@ ol {
     url('../images/hero/people-office.jpg');
   background-repeat: no-repeat;
   background-position: center;
+  max-width: 1440px;
+  background-size: cover;
   padding: 188px 0px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .hero-title {
   max-width: 496px;
@@ -221,7 +229,7 @@ ol {
   text-align: center;
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.11;
+  line-height: 1.1;
   color: var(--text-color);
   text-transform: capitalize;
   margin-bottom: 72px;
@@ -271,6 +279,7 @@ ol {
 .social-list {
   display: flex;
   gap: 24px;
+  justify-content: center;
 }
 .social-link {
   display: flex;
@@ -285,9 +294,10 @@ ol {
 .social-link:hover,
 .social-link:focus {
   background-color: var(--a-active-color);
+  fill: var(--webkit-text-fill-color);
 }
 .team-card {
-  padding: 32px 16px;
+  padding: 32px 0px;
 }
 .container-team-text {
   justify-content: center;
@@ -306,17 +316,27 @@ ol {
   border-radius: 4px;
   width: 168px;
   height: 88px;
-  fill: #8e8f99;
+  color: var(--customers-link-color);
 }
 .customers-link:hover,
 .customers-link:focus {
   border-color: var(--a-active-color);
-  fill: var(--a-active-color);
+  color: var(--a-active-color);
+}
+.customers-svg {
+  fill: currentColor;
 }
 /*=========== FOOTER ==========*/
 .footer {
   background-color: var(--background-color);
   padding: 100px 0px;
+}
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+.footer-logo-p {
+  margin-right: 120px;
 }
 .footer-logo {
   font-family: 'Raleway', sans-serif;
@@ -337,13 +357,12 @@ ol {
   width: 264px;
 }
 
-.footer-list {
-  display: flex;
-  gap: 120px;
-}
 .footer-sub-text {
-  color: var(--footer-text-color);
+  color: var(--hero-title-color);
   margin-bottom: 16px;
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 500;
 }
 .footer-item {
   max-width: 208px;
@@ -351,6 +370,21 @@ ol {
 .social-list-footer {
   display: flex;
   gap: 16px;
+}
+.social-item {
+  width: 40px;
+  height: 40px;
+}
+.social-svg {
+  fill: var(--webkit-text-fill-color);
+}
+.bc-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .bc-link:hover,
 .bc-link:focus {
@@ -409,9 +443,11 @@ ol {
 .portfolio-subtitle {
   margin-bottom: 8px;
 }
-.portfolio-item:hover .portfolio-card,
-.portfolio-item:focus .portfolio-card {
-  border: 1px solid #f4f4fd;
+.portfolio-link {
+  display: block;
+}
+.portfolio-link:hover,
+.portfolio-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
